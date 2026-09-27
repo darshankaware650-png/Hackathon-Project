@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8080/api';
+const API_BASE = "https://your-service.onrender.com/api";
 
 function getProfileId(){ return localStorage.getItem('profileId'); }
 function setProfileId(id){ localStorage.setItem('profileId', id); }
