@@ -1,4 +1,4 @@
-const API_BASE = "https://hackathon-project-pqdt.onrender.com";
+const API_BASE = "https://hackathon-project-pqdt.onrender.com/api";
 
 function getProfileId(){ return localStorage.getItem('profileId'); }
 function setProfileId(id){ localStorage.setItem('profileId', id); }
