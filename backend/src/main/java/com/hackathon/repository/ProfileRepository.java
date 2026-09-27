@@ -1,15 +1,17 @@
 package com.hackathon.repository;
 
-import com.google.cloud.firestore.Firestore;
-import com.google.firebase.cloud.FirestoreClient;
-import com.hackathon.model.StudentProfile;
-import org.springframework.stereotype.Repository;
-
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
+
+import org.springframework.stereotype.Repository;
+
+import com.google.cloud.firestore.Firestore;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.cloud.FirestoreClient;
+import com.hackathon.model.StudentProfile;
 
 @Repository
 public class ProfileRepository {
@@ -17,11 +19,14 @@ public class ProfileRepository {
     private static final String COLLECTION = "profiles";
 
     private final boolean useFirestore;
-    private final Map<String, StudentProfile> memoryStore = new ConcurrentHashMap<>();
+    private final Map<String, StudentProfile> memoryStore =
+            new ConcurrentHashMap<>();
+
     private Firestore firestore;
 
-    public ProfileRepository(Boolean firebaseInitialized) {
-        this.useFirestore = Boolean.TRUE.equals(firebaseInitialized);
+    public ProfileRepository() {
+        this.useFirestore = !FirebaseApp.getApps().isEmpty();
+
         if (this.useFirestore) {
             this.firestore = FirestoreClient.getFirestore();
         }
@@ -31,30 +36,53 @@ public class ProfileRepository {
         if (profile.getId() == null || profile.getId().isBlank()) {
             profile.setId(UUID.randomUUID().toString());
         }
+
         if (useFirestore) {
             try {
-                firestore.collection(COLLECTION).document(profile.getId()).set(profile).get();
-            } catch (InterruptedException | ExecutionException e) {
+                firestore.collection(COLLECTION)
+                        .document(profile.getId())
+                        .set(profile)
+                        .get();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException(
+                        "Saving profile was interrupted", e
+                );
+            } catch (ExecutionException e) {
                 throw new RuntimeException("Failed to save profile", e);
             }
         } else {
             memoryStore.put(profile.getId(), profile);
         }
+
         return profile;
     }
 
     public Optional<StudentProfile> findById(String id) {
         if (useFirestore) {
             try {
-                var doc = firestore.collection(COLLECTION).document(id).get().get();
-                if (doc.exists()) {
-                    return Optional.ofNullable(doc.toObject(StudentProfile.class));
+                var document = firestore.collection(COLLECTION)
+                        .document(id)
+                        .get()
+                        .get();
+
+                if (document.exists()) {
+                    return Optional.ofNullable(
+                            document.toObject(StudentProfile.class)
+                    );
                 }
+
                 return Optional.empty();
-            } catch (InterruptedException | ExecutionException e) {
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException(
+                        "Fetching profile was interrupted", e
+                );
+            } catch (ExecutionException e) {
                 throw new RuntimeException("Failed to fetch profile", e);
             }
         }
+
         return Optional.ofNullable(memoryStore.get(id));
     }
 }
