@@ -14,13 +14,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins(
-                                "https://hackathon-project-ruby-one.vercel.app"
-                        )
-                        .allowedMethods(
-                                "GET", "POST", "PUT", "PATCH",
-                                "DELETE", "OPTIONS"
-                        )
+                        .allowedOriginPatterns("https://*.vercel.app")
+                        .allowedMethods("GET", "POST", "PUT", "PATCH",
+                                "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }
         };
