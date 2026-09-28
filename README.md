@@ -22,10 +22,12 @@ Students find opportunities scattered across many websites, WhatsApp groups and 
 ## 🖼️ Screenshots
 
 ### Explore by Category
-![Categories](screenshots/categories.png)
+<img width="959" height="599" alt="Screenshot 2026-09-28 101329" src="https://github.com/user-attachments/assets/36f96d03-9e8d-4a80-96b3-ce58b26c7e90" />
+
 
 ### Opportunity Board (Search + Filter + Save)
-![Explore opportunities](screenshots/explore.png)
+![Uploading Screenshot 2026-09-28 101343.png…]()
+
 
 ---
 
