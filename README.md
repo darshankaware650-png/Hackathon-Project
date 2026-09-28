@@ -22,10 +22,12 @@ Students ko opportunities alag-alag websites, WhatsApp groups aur social pages p
 ## 🖼️ Screenshots
 
 ### Explore by Category
-![Categories](screenshots/categories.png)
+<img width="959" height="599" alt="Screenshot 2026-09-28 101329" src="https://github.com/user-attachments/assets/a98e6e42-9e5c-45c0-aab7-1b959ff219f6" />
+
 
 ### Opportunity Board (Search + Filter + Save)
-![Explore opportunities](screenshots/explore.png)
+<img width="959" height="599" alt="Screenshot 2026-09-28 101343" src="https://github.com/user-attachments/assets/bd1091e8-9a21-46f1-81cf-263624e057ec" />
+
 
 ---
 
