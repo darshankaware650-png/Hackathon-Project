@@ -21,6 +21,13 @@ Students find opportunities scattered across many websites, WhatsApp groups and 
 
 ## 🖼️ Screenshots
 
+
+### Overview
+<img width="947" height="599" alt="Screenshot 2026-09-28 110217" src="https://github.com/user-attachments/assets/82dbdd40-6b03-41e3-b6d7-bfc6c71f2af3" />
+
+
+
+
 ### Explore by Category
 <img width="959" height="599" alt="Screenshot 2026-09-28 110039" src="https://github.com/user-attachments/assets/f27d8ba8-eb3a-49ea-a887-edc590476444" />
 
