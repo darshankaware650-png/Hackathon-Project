@@ -1,54 +1,52 @@
 # ✦ CampusPulse
 
 > **Your next opportunity starts with you.**
-> Ek hi jagah par students ke liye internships, scholarships, hackathons, competitions, courses, certifications aur workshops — profile ke hisaab se personalized.
+> One place for students to discover internships, scholarships, hackathons, competitions, courses, certifications and workshops, personalized to their profile.
 
 🔗 **Live Demo:** [hackathon-project-ruby-one.vercel.app](https://hackathon-project-ruby-one.vercel.app/index.html)
 
-Built for **FITFEST 2026** (GDG FIT Pune) — *Student Opportunity Discovery Platform*.
+Built for **FITFEST 2026** (GDG FIT Pune) as a *Student Opportunity Discovery Platform*.
 
 ---
 
 ## 📌 Problem Statement
 
-Students ko opportunities alag-alag websites, WhatsApp groups aur social pages par bikhri hui milti hain. Isse deadlines miss ho jaate hain aur relevant opportunity dhundhna mushkil hota hai.
+Students find opportunities scattered across many websites, WhatsApp groups and social pages. Deadlines get missed, and finding something relevant is difficult.
 
 ## 💡 Our Solution
 
-**CampusPulse** ek student-first platform hai. Student apna profile banata hai (skills, interests, preferred opportunity types), aur uske baad use category-wise organized opportunity board milta hai. Har opportunity ka details page hota hai, aur apply karne ke liye student seedha official opportunity website par redirect ho jaata hai.
+**CampusPulse** is a student-first platform. A student creates a profile (skills, interests, preferred opportunity types) and gets a category-wise opportunity board. Every opportunity has a details page, and when the student is ready to apply, they are redirected straight to the official opportunity website.
 
 ---
 
 ## 🖼️ Screenshots
 
 ### Explore by Category
-<img width="959" height="599" alt="Screenshot 2026-09-28 101329" src="https://github.com/user-attachments/assets/a98e6e42-9e5c-45c0-aab7-1b959ff219f6" />
-
+![Categories](screenshots/categories.png)
 
 ### Opportunity Board (Search + Filter + Save)
-<img width="959" height="599" alt="Screenshot 2026-09-28 101343" src="https://github.com/user-attachments/assets/bd1091e8-9a21-46f1-81cf-263624e057ec" />
-
+![Explore opportunities](screenshots/explore.png)
 
 ---
 
 ## ✨ Features
 
-- 👤 **Profile Setup** — full name, education, skills, interests aur pasandida opportunity types
+- 👤 **Profile Setup**: full name, education, skills, interests and preferred opportunity types
 - 🗂️ **Category-wise Sections** (7 categories)
-  - 💼 Internships — work experience and career starts
-  - ⚡ Hackathons — build, collaborate, compete
-  - 🎓 Scholarships — funding for your education
-  - 🏆 Competitions — showcase what you can do
-  - 📚 Courses — learn a skill, level up
-  - ✦ Certifications — validate your knowledge
-  - 🧠 Workshops — hands-on learning sessions
-- 🔍 **Search** — title, skills ya keywords se opportunities dhundho
-- 🎛️ **Category Filter** — dropdown se type select karo
-- 🏷️ **Skill Tags & Deadlines** — har card par tags aur last date
-- ❤️ **Save / Bookmark** — pasandida opportunities save karo, sidebar mein count dikhta hai
-- ✨ **For You** — profile ke basis par personalized feed
-- 📄 **View Details** — full details dekho, phir official site par redirect ↗
-- 🏠 **Dashboard Overview**, **My Profile** aur **Settings**
+  - 💼 Internships: work experience and career starts
+  - ⚡ Hackathons: build, collaborate, compete
+  - 🎓 Scholarships: funding for your education
+  - 🏆 Competitions: showcase what you can do
+  - 📚 Courses: learn a skill, level up
+  - ✦ Certifications: validate your knowledge
+  - 🧠 Workshops: hands-on learning sessions
+- 🔍 **Search** by title, skills or keywords
+- 🎛️ **Category Filter** via dropdown
+- 🏷️ **Skill Tags & Deadlines** on every opportunity card
+- ❤️ **Save / Bookmark** opportunities, with a live count in the sidebar
+- ✨ **For You**: personalized feed based on the student's profile
+- 📄 **View Details**, then redirect to the official site ↗
+- 🏠 **Dashboard Overview**, **My Profile** and **Settings**
 
 ---
 
@@ -64,14 +62,13 @@ Create Profile → Overview → Explore by Category
 
 ## 🛠️ Tech Stack
 
-| Layer    | Technology                  |
-|----------|-----------------------------|
-| Frontend | HTML, CSS, JavaScript       |
-| Backend  | Spring Boot (Java, Maven)   |
-| Database | Firebase / Firestore        |
-| Hosting  | Vercel                      |
-
-> Agar final build mein kuch alag use kiya hai to yeh table update kar lena.
+| Layer            | Technology                |
+|------------------|---------------------------|
+| Frontend         | HTML, CSS, JavaScript     |
+| Backend          | Spring Boot (Java, Maven) |
+| Database         | Firebase / Firestore      |
+| Hosting Frontend | Vercel                    |
+| Hosting Backend  | Render                    |
 
 ---
 
@@ -94,9 +91,9 @@ HackathonProject/
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/darshankaware650-png/<repo-name>.git
-cd <repo-name>/frontend
-npx serve .            # ya index.html seedha browser mein kholo
+git clone https://github.com/darshankaware650-png/Hackathon-Project.git
+cd Hackathon-Project/frontend
+npx serve .
 ```
 
 Backend (optional):
@@ -112,19 +109,15 @@ mvn spring-boot:run    # http://localhost:8080
 
 - AI-based opportunity recommendations
 - Deadline reminders (email / notifications)
-- Admin panel se opportunities add aur verify karna
-- College-wise aur location-wise filters
-- Resume se automatic skill extraction
+- Admin panel to add and verify opportunities
+- College-wise and location-wise filters
+- Automatic skill extraction from resumes
 
 ---
 
 ## 👨‍💻 Author
 
-**Darshan Kaware** — Computer Engineering, VPKBIET Baramati
+**Darshan Kaware**, Computer Engineering, VPKBIET Baramati
 
 - GitHub: [darshankaware650-png](https://github.com/darshankaware650-png)
 - LinkedIn: [darshan-kaware](https://linkedin.com/in/darshan-kaware-5262613a8)
-
----
-
-⭐ Project pasand aaye to star zaroor dena!
